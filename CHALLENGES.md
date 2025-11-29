@@ -102,23 +102,35 @@ A chess-based movement puzzle:
 
 ---
 
-## 6. Sudoku Validator
+## 6. Minesweeper (Mine-Sweeper Game)
 
-A logic-based grid puzzle:
+A classic minefield logic game:
 
-- Render a **9x9 Sudoku board**, partially filled.
-- User inputs numbers in empty cells.
-- On clicking “Validate”, check that:
-  - No row contains duplicate numbers (1–9).
-  - No column contains duplicate numbers (1–9).
-  - No 3x3 grid contains duplicate numbers (1–9).
-- Display clear validation results with error highlights.
+- Render a grid-based board (for example: **9x9**, **16x16**, or similar).
+- Randomly place a set number of **mines** on the board.
+- Each cell can be:
+  - **Hidden**
+  - **Revealed**
+  - **Flagged** as a suspected mine
+- When the user **left-clicks** a hidden cell:
+  - If it contains a mine → **game over**.
+  - If it is empty:
+    - Show the number of **adjacent mines** (0–8).
+    - If the number is **0**, automatically reveal its neighbors (flood fill behavior).
+- When the user **right-clicks** (or alternative interaction) on a hidden cell:
+  - Toggle a **flag** to mark/unmark a suspected mine.
+- Game ends when:
+  - The user clicks a mine (loss), or
+  - All **non-mine cells are revealed** (win).
 
 **Ideas / Hints:**
 
-- Highlight invalid cells or rows/columns/subgrids.
-- Provide a “Clear” or “Reset” button.
-- Optionally add basic input validation (only numbers 1–9).
+- Allow different **difficulty levels** (board size + mine count).
+- Show:
+  - Number of **remaining mines** (based on flags).
+  - A **timer** and/or move count.
+- Disable interaction after win/loss and show a clear message.
+- Provide a **Restart** / **New Game** button.
 
 ---
 
