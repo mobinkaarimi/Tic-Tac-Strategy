@@ -1,7 +1,7 @@
 import type React from 'react'
 
-import { useTheme } from '../../theme/useTheme'
-import { cn } from '../../lib/cn'
+import { useTheme } from '@shared/theme/context'
+import { cn } from '@shared/lib/cn'
 
 const iconClassName = 'h-5 w-5'
 

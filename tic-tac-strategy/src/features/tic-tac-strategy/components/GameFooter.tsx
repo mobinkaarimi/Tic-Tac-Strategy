@@ -1,7 +1,7 @@
 import { memo } from 'react'
 
-import { GlassButton } from '../../../shared/components/ui/GlassButton'
-import { cn } from '../../../shared/lib/cn'
+import { GlassButton } from '@shared/components/ui/GlassButton'
+import { cn } from '@shared/lib/cn'
 import { type GameStatus } from '../lib/types'
 
 type GameFooterProps = {

@@ -1,6 +1,6 @@
 import type React from 'react'
 import { memo } from 'react'
-import { cn } from '../../../shared/lib/cn'
+import { cn } from '@shared/lib/cn'
 import { type GameStatus, type Player } from '../lib/types'
 
 type GameHeaderProps = {

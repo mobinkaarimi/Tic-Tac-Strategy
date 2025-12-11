@@ -1,8 +1,8 @@
 import type React from 'react'
 import { memo } from 'react'
-import { cn } from '../../../shared/lib/cn'
 import { Cell } from './Cell'
 import { type CellIndex, type Player, type WinningLine } from '../lib/types'
+import { cn } from '@shared/lib/cn'
 
 type BoardProps = {
   board: (Player | null)[]

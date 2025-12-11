@@ -5,7 +5,7 @@ import { GameFooter } from './GameFooter'
 import { GameHeader } from './GameHeader'
 import { GameResultModal } from './GameResultModal'
 import { useGameShell } from './useGameShell'
-import { GlassCard } from '../../../shared/components/ui'
+import { GlassCard } from '@shared/components/ui'
 
 export const GameShell: React.FC = () => {
   const {
