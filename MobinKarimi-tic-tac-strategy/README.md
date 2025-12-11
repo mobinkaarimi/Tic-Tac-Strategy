@@ -24,6 +24,23 @@ Each player can keep only their last **3 marks** on the 3×3 board, so you have 
 - Custom hooks for state management
 - Simple theme context for light/dark mode
 
+## Scripts
+
+- `pnpm dev` – start dev server
+- `pnpm build` – type-check and create production build
+- `pnpm preview` – preview the production build
+- `pnpm lint` – run ESLint checks
+
+## Project structure
+
+- `src/features` – game logic, hooks, and UI for Tic-Tac Strategy
+- `src/features/lib` – pure game engine and types
+- `src/features/hooks` – stateful hooks (`useTicTacGame`, `useGameShell`)
+- `src/features/components` – presentational game components (board, header, footer, modal, shell)
+- `src/shared/components` – reusable UI primitives (glass card, button, layout, theme toggle)
+- `src/shared/theme` – theme context/provider and hooks
+- `src/shared/lib` – small utilities (classNames helper)
+
 ---
 
 ## How to Run

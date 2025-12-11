@@ -22,8 +22,10 @@
 
 @layer utilities {
   .bg-noise-overlay {
-    background-image:
-      radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 0),
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0.35) 1px,
+        transparent 0
+      ),
       radial-gradient(rgba(0, 0, 0, 0.18) 1px, transparent 0);
     background-size: 18px 18px;
     background-position: 0 0, 9px 9px;

@@ -1,12 +1,12 @@
-import type React from 'react'
+import type React from "react";
 
-import { useGameShell } from '@features/tic-tac-strategy/hooks'
-import { GlassCard } from '@shared/components/ui'
+import { useGameShell } from "@features/hooks";
+import { GlassCard } from "@shared/components";
 
-import { Board } from './Board'
-import { GameFooter } from './GameFooter'
-import { GameHeader } from './GameHeader'
-import { GameResultModal } from './GameResultModal'
+import { Board } from "./Board";
+import { GameFooter } from "./GameFooter";
+import { GameHeader } from "./GameHeader";
+import { GameResultModal } from "./GameResultModal";
 
 export const GameShell: React.FC = () => {
   const {
@@ -25,7 +25,7 @@ export const GameShell: React.FC = () => {
     handleCellClick,
     handleResetGame,
     handleCloseModal,
-  } = useGameShell()
+  } = useGameShell();
 
   return (
     <div className="flex flex-col gap-5 items-center max-w-xl mx-auto text-center w-full  sm:gap-6">
@@ -51,10 +51,7 @@ export const GameShell: React.FC = () => {
           winningLine={winningLine}
           onCellClick={handleCellClick}
         />
-        <GameFooter
-          status={status}
-          onReset={handleResetGame}
-        />
+        <GameFooter status={status} onReset={handleResetGame} />
       </GlassCard>
       {modalOpen && modalVariant && (
         <GameResultModal
@@ -69,5 +66,5 @@ export const GameShell: React.FC = () => {
         />
       )}
     </div>
-  )
-}
+  );
+};
