@@ -1,7 +1,8 @@
 import type { JSX } from 'react'
-import { GameShell } from './features/tic-tac-strategy/components/GameShell'
-import { Page } from './shared/components/layout/Page'
-import { ThemeProvider } from './shared/theme/ThemeProvider'
+
+import { GameShell } from '@features/tic-tac-strategy/components/GameShell'
+import { Page } from '@shared/components/layout/Page'
+import { ThemeProvider } from '@shared/theme/ThemeProvider'
 
 const App = (): JSX.Element => {
   return (

@@ -1,5 +1,5 @@
 import type React from 'react'
-import { ThemeToggle } from '../ui'
+import { ThemeToggle } from '@shared/components/ui'
 
 type PageProps = {
   children: React.ReactNode
@@ -7,13 +7,13 @@ type PageProps = {
 
 export const Page: React.FC<PageProps> = ({ children }) => {
   const rootClassName =
-    'bg-gradient-to-b duration-300 from-neutral-100 min-h-screen overflow-hidden relative text-slate-900 transition-colors to-neutral-100 via-neutral-200  dark:from-neutral-950 dark:text-slate-50 dark:to-neutral-950 dark:via-neutral-900'
+    'relative min-h-screen overflow-hidden bg-gradient-to-b from-neutral-100 via-neutral-200 to-neutral-100 text-slate-900 transition-colors duration-300  dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950 dark:text-slate-50'
 
   const containerClassName =
-    'flex flex-col gap-8 max-w-5xl mx-auto px-4 py-10 relative  sm:px-6  lg:px-8'
+    'mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10 relative  sm:px-6  lg:px-8'
 
   const toggleWrapperClassName =
-    'backdrop-blur-xl bg-neutral-100/80 border border-neutral-300/80 duration-300 p-2 rounded-2xl shadow-[0_12px_40px_-28px_rgba(51,65,85,0.45)] transition-colors  dark:border-neutral-800 dark:bg-neutral-900/70 dark:shadow-[0_12px_40px_-28px_rgba(0,0,0,0.8)]'
+    'border border-neutral-300/80 bg-neutral-100/80 p-2 rounded-2xl shadow-[0_12px_40px_-28px_rgba(51,65,85,0.45)] backdrop-blur-xl transition-colors duration-300  dark:border-neutral-800 dark:bg-neutral-900/70 dark:shadow-[0_12px_40px_-28px_rgba(0,0,0,0.8)]'
 
   return (
     <div className={rootClassName}>

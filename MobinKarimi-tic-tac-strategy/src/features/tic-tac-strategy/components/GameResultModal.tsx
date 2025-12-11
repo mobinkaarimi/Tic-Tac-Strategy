@@ -1,6 +1,6 @@
 import type React from 'react'
 import { memo } from 'react'
-import { GlassButton } from '@shared/components/ui/GlassButton'
+import { GlassButton } from '@shared/components/ui'
 import { type Player } from '../lib/types'
 
 type GameResultModalProps = {
