@@ -1,33 +1,33 @@
-# Tic-Tac Strategy
+# Tic-Tac Strategy – React Implementation (Mobin Karim)
 
-A tactical twist on Tic-Tac-Toe built with React, TypeScript, Vite, and Tailwind.
+A tactical variant of Tic-Tac-Toe built with React, TypeScript and Tailwind.  
+Each player can keep only their last **3 marks** on the 3×3 board, so you have to think ahead and manage space carefully.
 
-## Tech stack
-- React 18 + TypeScript
-- Vite
-- Tailwind CSS
+---
 
-## Getting started
+## Challenge Rules
+
+- Two players: **X** and **O**
+- Only the last **3 moves per player** are visible on the board  
+  – when a player places a 4th mark, their oldest mark disappears.
+- **Win**: any classic 3-in-a-row (row, column, diagonal).
+- **Draw**: after **20 turns** with no winner.
+- The game is fully blocked after win/draw until reset.
+
+---
+
+## Tech Stack
+
+- **React** + **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- Custom hooks for state management
+- Simple theme context for light/dark mode
+
+---
+
+## How to Run
+
 ```bash
 pnpm install
 pnpm dev
-```
-
-Build for production:
-```bash
-pnpm build
-```
-
-## Game rules
-- Each player can have only their last three marks active on the 3×3 board; the oldest mark disappears when placing a fourth.
-- Players alternate turns; X always starts.
-- Win by aligning three marks; if no one wins by turn 20, the game is a draw.
-
-## Architecture
-- `src/features/tic-tac-strategy/lib`: Pure engine logic (board derivation, win/draw checks, move application).
-- `src/features/tic-tac-strategy/hooks`: State and derived data (`useTicTacGame`, `useGameShell`).
-- `src/features/tic-tac-strategy/components`: Presentational game UI (shell, board, cells, header/footer, modal).
-- `src/shared/components/ui`: Shared glassmorphism primitives and theme toggle.
-- `src/shared/components/layout`: Page shell and background.
-- `src/shared/theme`: Theme context/provider/hook.
-- `src/shared/lib`: Shared utilities (e.g., `cn`).
